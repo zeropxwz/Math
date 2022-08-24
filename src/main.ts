@@ -42,22 +42,31 @@ function exp (num: number, deg: number): number {
 
 // логорифм - функция нахождения степени основания LOG  2   8 = 3 | LOG 2 8 = 2^3
 //                                                     осн арг        
-function log (root: number, arg: number) {
+function log (base: number, arg: number) {
 
-    for (let deg = 0; deg < Infinity; deg++) {
+    // for (let deg = 0; deg < Infinity; deg++) {
 
-        if (exp(root, deg) === arg) {
-            return deg
-        }
-
+    //     if (exp(base, deg) === arg) {
+    //         return deg
+    //     }
+        
+    let count: number = 0
+    
+    while (arg > 1) {
+        arg = arg / base
     }
 
+
+
+    return count
 }
+
+
 // извление корня =- функция получения основания 
-function root (exp: number, num: number): number {
+// function root (exp: number, num: number): number {
 
-    let r: number
+//     let r: number
 
 
-    return 1
-}
+//     return 1
+// }
